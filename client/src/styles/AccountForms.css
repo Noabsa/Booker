@@ -1,0 +1,116 @@
+.account-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+}
+.account-form form {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  padding: 2rem 0rem 1.5rem 0rem;
+}
+.account-form span {
+  padding: 0.5rem 0rem 0rem 0rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.account-form form input {
+  width: 100%;
+  margin: 0.5rem 0rem 0.7rem 0rem;
+  height: 2.3rem;
+  padding: 0rem 0rem 0rem 0.8rem;
+  outline: none;
+  border: 1px var(--Light-Accent) solid;
+  border-radius: 8px;
+  color: var(--Dark-Shade);
+  box-shadow: 1px 1px 5px var(--Light-Shade);
+}
+.account-form form input.false {
+  color: var(--Alert-Shade);
+  border: var(--Alert-Shade) 1px solid;
+  background: linear-gradient(
+    100deg,
+    var(--Alert-Shade) -1000%,
+    transparent 400%
+  );
+  font-weight: 800;
+}
+.account-form form input::placeholder {
+  color: var(--Light-Accent);
+}
+.account-form a {
+  margin: -0rem 0rem 1rem 1rem;
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--Brand-Color);
+  text-decoration: underline;
+}
+.account-form a:hover {
+  cursor: pointer;
+}
+.account-form h2 {
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  font-size: 1.9rem;
+  color: var(--Dark-Shade);
+  text-shadow: 1.5px 0px 0px var(--Brand-Color);
+  -webkit-text-stroke: 0.5px var(--Light-Shade);
+  font-weight: 900;
+}
+.account-form p {
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  text-align: center;
+}
+.account-form button {
+  margin: 3.5rem 0rem 1rem 0rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px var(--Light-Accent) solid;
+  background: linear-gradient(
+    -20deg,
+    var(--Brand-Color) -300%,
+    transparent 300%
+  );
+  box-shadow: 1px 1px 10px var(--Light-Accent);
+}
+.account-form button:hover {
+  background: linear-gradient(
+    -20deg,
+    var(--Brand-Color) -200%,
+    transparent 400%
+  );
+}
+.account-form button:active {
+  background: linear-gradient(
+    -20deg,
+    var(--Brand-Color) -350%,
+    transparent 250%
+  );
+  font-weight: 700;
+}
+.hide {
+  display: none;
+}
+.account-form button.extra-h {
+  margin-top: 5rem;
+}
+.account-form p.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  height: 4rem;
+  color: var(--Alert-Shade);
+}
+.account-form p.message.true {
+  color: var(--Brand-Color);
+}

@@ -1,0 +1,58 @@
+form input {
+  margin: 4rem 0rem 0rem 0rem;
+  width: 25rem;
+  height: 2.5rem;
+  padding: 0rem 0rem 0rem 0.8rem;
+  outline: none;
+  border: 1px var(--Light-Accent) solid;
+  border-right: 1.5px var(--Light-Accent) solid;
+  border-radius: 8px;
+  color: var(--Dark-Shade);
+  font-weight: 600;
+}
+form input::placeholder {
+  color: var(--Light-Accent);
+  font-weight: 400;
+}
+form ul {
+  width: 25rem;
+  background-color: white;
+  border-radius: 0px 0px 8px 8px;
+  border-right: var(--Light-Accent) 1.5px solid;
+  border-bottom: var(--Light-Accent) 1.5px solid;
+  border-left: var(--Light-Accent) 1px solid;
+}
+form ul li {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  padding: 0.45rem 1.2rem 0.45rem 1.2rem;
+  text-overflow: ellipsis;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  box-shadow: 10px -1px 0px var(--Light-Shade);
+}
+form ul li:first-child {
+  padding-top: 0.8rem;
+}
+form ul li:last-child {
+  padding-bottom: 0.8rem;
+}
+form ul li:hover {
+  font-weight: 800;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  cursor: pointer;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+form .close {
+  padding: 0.2rem;
+  position: absolute;
+  transform: translate(-2.2rem, 4.2rem);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+form .close:hover {
+  color: var(--Brand-Color);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  cursor: pointer;
+  font-variation-settings: "FILL" 0, "wght" 900, "GRAD" 0, "opsz" 48;
+}

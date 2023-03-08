@@ -1,0 +1,237 @@
+:root {
+  --nopic: var(--icon);
+  --icon: url(../images/nopic.svg);
+}
+.card-book {
+  z-index: 2;
+  background-color: rgba(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: -40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 10rem;
+  width: 40rem;
+  height: 100vh;
+  box-shadow: 10px 0px 20px var(--Light-Accent);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.card-book.display.true {
+  transform: translateX(-40rem);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.card-book .header {
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  min-height: 12rem;
+  flex-basis: 12rem;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--Light-Accent) -300%,
+    hsla(120, 6%, 75%, 0.05) 51.7%,
+    var(--Light-Accent) 52%,
+    hsla(120, 6%, 75%, 0.25) 52.3%,
+    transparent 60%,
+    transparent 100%
+  );
+  position: relative;
+  padding: 0rem 3.5rem 0rem 3.5rem;
+}
+.card-book .header h2 {
+  width: 100%;
+  padding: 2.5rem 0rem 1rem 0rem;
+  font-size: 2rem;
+  color: var(--Dark-Shade);
+  text-shadow: 2px 0px 10px var(--Light-Shade);
+  font-weight: 900;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-shadow: 100px -10px 20px hsla(120, 6%, 75%, 0.35);
+  overflow-y: visible;
+}
+.card-book .header p {
+  font-size: 1rem;
+  width: 100%;
+  padding: 1.5rem 0rem 0.5rem 0.2rem;
+  margin: 0rem 0rem 0rem 0rem;
+  font-weight: 600;
+  color: var(--Dark-Shade);
+  font-style: italic;
+}
+.card-book .content {
+  padding: 0rem 3.5rem 0rem 4rem;
+  margin-top: -1rem;
+  height: 37rem;
+  max-height: 37rem;
+  flex-basis: 37rem;
+  width: 100%;
+  overflow-y: hidden;
+}
+.card-book .content .body {
+  display: flex;
+  border-bottom: var(--Light-Shade) 1px solid;
+  border-top: var(--Light-Shade) 1px solid;
+  mask: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--Brand-Color) 5%,
+      var(--Brand-Color) 95%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      var(--Brand-Color) 5%,
+      var(--Brand-Color) 95%,
+      transparent 100%
+    );
+  padding: 4rem 0rem;
+  min-height: 25rem;
+  height: 25rem;
+}
+.card-book .content .body img {
+  border-radius: 8px;
+  min-height: 15rem;
+  max-height: 15rem;
+  min-width: 10rem;
+  max-width: 10rem;
+  margin: 1rem 2.5rem 0rem 0rem;
+  background-image: linear-gradient(
+      -35deg,
+      var(--Light-Accent)-100%,
+      transparent -80%,
+      var(--Brand-Color) 1000%
+    ),
+    var(--nopic);
+
+  border-right: 1px solid var(--Light-Accent);
+  border-bottom: 1px solid var(--Light-Accent);
+  border-top: 1px solid var(--Light-Shade);
+  border-left: 1px solid var(--Light-Shade);
+}
+.card-book .content .body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 14;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  height: 16.75rem;
+}
+.card-book .content .data {
+  min-height: 12rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-book .content .data div {
+  padding: 0.7rem 0rem;
+  display: flex;
+  align-items: center;
+}
+.card-book .content .data label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: 6rem;
+}
+.card-book .content .data span {
+  font-weight: 800;
+  font-size: 1rem;
+}
+.card-book .footer {
+  height: calc(100vh - 11rem - 37rem);
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    var(--Light-Accent) -300%,
+    hsla(120, 6%, 75%, 0.05) 71.7%,
+    var(--Light-Accent) 72%,
+    hsla(120, 6%, 75%, 0.25) 72.3%,
+    transparent 80%,
+    transparent 100%
+  );
+}
+.card-book .hamburger {
+  position: absolute;
+  z-index: 3;
+  bottom: 2rem;
+  right: 3rem;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: visible;
+}
+.card-book .children {
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute;
+  bottom: 3.2rem;
+  right: -7rem;
+}
+.card-book .hamburger button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--Brand-Color);
+  margin: 0.2rem 0.5rem;
+  background-color: white;
+  color: var(--Brand-Color);
+  box-shadow: 1px 1px 10px var(--Light-Accent);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.card-book .hamburger button:hover {
+  background-color: var(--Brand-Color);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  color: white;
+  cursor: pointer;
+}
+.card-book .hamburger button.child.true {
+  background-color: white;
+  border: 1.5px solid var(--Dark-Accent);
+  color: var(--Dark-Accent);
+}
+.card-book .hamburger button.child.true:hover {
+  color: white;
+  border: 1.5px solid var(--Dark-Accent);
+  background-color: var(--Dark-Accent);
+}
+.card-book .hamburger button.child:active {
+  opacity: 0.5;
+}
+.card-book .hamburger button.parent {
+  margin: 0.6rem 0.5rem 0.2rem 0.5rem;
+  transform: scale(1.3);
+}
+.card-book .hamburger button.child {
+  transform: scale(0) translateY(150px);
+  overflow: hidden;
+}
+.card-book .hamburger:hover .parent {
+  background-color: var(--Brand-Color);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  color: white;
+}
+.card-book .hamburger:hover .children {
+  right: 0rem;
+  bottom: 3.2rem;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+.card-book .hamburger:hover .child {
+  transform: scale(1) translateY(0px);
+}
+
+.card-book .hamburger button.parent .parent {
+  font-variation-settings: "FILL" 1, "wght" 900, "GRAD" 50, "opsz" 100;
+}
+.card-book .hamburger:hover button.parent .parent {
+  transform: rotate(90deg) translate(1px, -1px);
+  transform-origin: center;
+}
+.material-symbols-outlined {
+  padding-top: 0.25rem;
+  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" 50, "opsz" 100;
+  overflow: hidden;
+}

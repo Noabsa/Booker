@@ -1,0 +1,151 @@
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--Dark-Shade);
+}
+.user-dashboard .header {
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  min-height: 12rem;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--Light-Accent) -300%,
+    hsla(120, 6%, 75%, 0.05) 51.7%,
+    var(--Light-Accent) 52%,
+    hsla(120, 6%, 75%, 0.25) 52.3%,
+    transparent 60%,
+    transparent 100%
+  );
+  position: relative;
+}
+.user-dashboard .header h2 {
+  width: 100%;
+  margin: 0rem 0rem 0rem 12rem;
+  padding: 2.5rem 0rem 1rem 0rem;
+  font-size: 2rem;
+  color: var(--Dark-Shade);
+  text-shadow: 2px 0px 10px var(--Light-Shade);
+  font-weight: 900;
+}
+.user-dashboard .header p {
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 1.5rem 0rem 0.5rem 0.2rem;
+  margin: 0rem 0rem 0rem 12rem;
+  font-weight: 800;
+}
+.user-dashboard .header .img {
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  margin: 2.5rem 0rem 0rem 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--Light-Accent) -400%, white 80%);
+  border: 1px solid var(--Light-Accent);
+  box-shadow: 1px 1px 20px hsla(120, 6%, 75%, 0.5);
+  transform: rotate(-30deg);
+}
+.user-dashboard .header .avatar.brand-font {
+  font-size: 4.3rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 5.1rem;
+}
+.user-dashboard .content {
+  height: 100%;
+  width: 100%;
+}
+.user-dashboard .content .title {
+  padding: 0rem 0rem 0.3rem 4rem;
+  height: 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-bottom: var(--Light-Shade) 1px solid;
+  mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--Brand-Color) 5%,
+    var(--Brand-Color) 95%,
+    transparent 100%
+  );
+  width: 100%;
+}
+.user-dashboard .content .activity {
+  height: calc(100% / 10 * 5.5);
+  padding: 0rem 1rem 2rem 1rem;
+}
+.user-dashboard .content .bookmark {
+  height: calc(100% / 10 * 4.5);
+}
+div.chart {
+  padding: 1rem;
+  max-width: 500px;
+  margin-left: 5rem;
+}
+.activity div canvas {
+  transform: scale(1);
+}
+.user-dashboard .content div.chart #activityChart {
+  max-width: 400px;
+  min-width: 400px;
+  width: 400px;
+}
+.user-dashboard .content div.chart #stadisticsChart {
+  max-height: 200px;
+  min-height: 200px;
+  height: 200px;
+}
+
+@media (max-width: 1400px) {
+  .user-dashboard .content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+  .user-dashboard .content section.activity,
+  .user-dashboard .content section.bookmark {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .user-dashboard .content div.chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-left: 0rem;
+  }
+  .user-dashboard .content .activity div.chart {
+    padding-left: 0rem;
+  }
+  .user-dashboard .content div.chart #activityChart {
+    max-width: 400px;
+    min-width: 400px;
+    width: 400px;
+    max-height: 242px;
+    min-height: 242px;
+    height: 242px;
+  }
+  .user-dashboard .content div.chart #stadisticsChart {
+    max-height: 287px;
+    min-height: 287px;
+    height: 287px;
+  }
+}
+/*@media (max-width: 1150px) {
+  .user-dashboard .content {
+    flex-direction: column;
+  }
+}*/

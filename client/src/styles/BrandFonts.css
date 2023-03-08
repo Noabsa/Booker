@@ -1,0 +1,17 @@
+.brand-font {
+  font-size: 3rem;
+  text-shadow: 2.5px 0px 0px var(--Brand-Color);
+  -webkit-text-stroke: 0.5px var(--Light-Shade);
+  font-weight: 800;
+  overflow: hidden;
+}
+.brand-font span,
+span.brand-font {
+  font-size: 5.5rem;
+  font-weight: bolder;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--Dark-Shade);
+  text-shadow: -3.5px 2px var(--Brand-Color);
+  overflow: hidden;
+}

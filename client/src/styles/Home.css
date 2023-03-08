@@ -1,0 +1,120 @@
+.right-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40rem;
+  width: 40rem;
+  height: 100%;
+  box-shadow: 10px 0px 20px var(--Light-Accent);
+}
+.central-area {
+  min-width: 10rem;
+  flex-basis: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    100deg,
+    var(--Brand-Color) -2000%,
+    transparent 105%
+  );
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+}
+.central-area.unfold {
+  margin-left: 14rem;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+}
+.search-area {
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 1400px) {
+  .wrapper {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .user.right-area {
+    width: 100%;
+    padding-left: 4rem;
+  }
+  .user.right-area.l-unfold {
+    padding-left: 15rem;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+  }
+  .user .search-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*height: 6.5rem;*/
+    overflow: hidden;
+    width: 100%;
+    justify-content: flex-end;
+    /*position: relative;*/
+  }
+  .central-area .search-area form {
+    position: relative;
+    left: 0rem;
+    top: 0rem;
+  }
+  .user .search-area form {
+    position: absolute;
+    z-index: 5;
+    left: 7rem;
+    top: -2rem;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+  }
+  .user.central-area.unfold .search-area form {
+    transform: translateX(11rem);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+  }
+  .central-area .search-area form input {
+    height: 2.5rem;
+  }
+  .user.central-area .search-area form input {
+    height: 2.1rem;
+  }
+  .user.central-area h1.brand-font {
+    /*position: absolute;*/
+    transform: scale(0.6);
+    /* margin-right: 8rem;*/
+    margin-bottom: 0.5rem;
+  }
+  .user.central-area.unfold h1.brand-font {
+    margin-right: 11rem;
+  }
+  .user.central-area .brand-font br {
+    display: none;
+  }
+  .user.central-area {
+    justify-content: flex-start;
+    width: 100%;
+    align-items: flex-start;
+    max-height: 6.4rem;
+    /*position: relative;*/
+  }
+}
+@media (max-width: 1150px) {
+  .wrapper {
+    min-width: 1150px;
+    max-width: 1150px;
+    width: 1150px;
+  }
+  .user.central-area {
+    min-width: 1150px;
+    max-width: 1150px;
+    width: 1150px;
+  }
+  .user.search-area {
+    min-width: 1150px;
+    max-width: 1150px;
+    width: 1150px;
+  }
+}

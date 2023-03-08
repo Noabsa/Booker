@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans&family=Urbanist:wght@300;400;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Urbanist", sans-serif;
+  overflow: hidden;
+}
+html {
+  min-width: 980px;
+}
+:root {
+  --Light-Shade: #f1ede0;
+  --Light-Accent: #bac2ba;
+  --Brand-Color: #00a0b0;
+  --Dark-Accent: #ae8532;
+  --Dark-Shade: #29282d;
+  --Alert-Shade: #b02e0c;
+}
+#root {
+  min-width: 1150px;
+  min-height: 800px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    100deg,
+    var(--Brand-Color) -2000%,
+    transparent 105%
+  );
+}
+.context {
+  display: flex;
+  width: 100%;
+}
